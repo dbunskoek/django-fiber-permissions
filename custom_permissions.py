@@ -15,8 +15,7 @@ CONTENTITEM_PERMISSIONS = ('change_contentitem', 'delete_contentitem')
 
 
 def remove_obj_perms_connected_with_object(sender, instance, **kwargs):
-    filters = Q(content_type=ContentType.objects.get_for_model(instance),
-        object_pk=instance.pk)
+    filters = Q(content_type=ContentType.objects.get_for_model(instance), object_pk=instance.pk)
     UserObjectPermission.objects.filter(filters).delete()
 
 
@@ -25,7 +24,7 @@ class CustomPermissions(Permissions):
     def __init__(self):
         """
         Since guardian does not delete permission objects, when the objects that
-        they pont to are deleted. We must take care of deleting them our selves.
+        they point to are deleted. We must take care of deleting them ourselves.
         See http://packages.python.org/django-guardian/userguide/caveats.html?highlight=caveat
         """
         pre_delete.connect(remove_obj_perms_connected_with_object, sender=Image)
@@ -37,7 +36,7 @@ class CustomPermissions(Permissions):
     def filter_objects(self, user, qs):
         """
         Returns all objects that `user` is allowed to change, based on guardian permissions.
-        Returns all objects if user is superuser.
+        Returns all objects if `user` is a superuser.
         """
         if user.is_superuser:
             return qs
@@ -51,7 +50,7 @@ class CustomPermissions(Permissions):
 
     def can_move_page(self, user, page):
         """
-        A user with chnange-permissions is allowed to move the page.
+        A `user` with change-permissions is allowed to move the page.
         A superuser always has all permissions as far as guardian is concerned.
         """
         return 'change_page' in get_perms(user, page)
@@ -72,7 +71,7 @@ class CustomPermissions(Permissions):
         superuser = User.objects.get(is_superuser=True)
 
         qs = qs.filter(Q(id__in=get_objects_for_user(user, 'change_%s' % qs.model.__name__.lower(), qs.model)) |
-            Q(id__in=get_objects_for_user(superuser, 'change_%s' % qs.model.__name__.lower(), qs.model)))
+                       Q(id__in=get_objects_for_user(superuser, 'change_%s' % qs.model.__name__.lower(), qs.model)))
         return qs
 
     def filter_images(self, user, qs):

@@ -9,10 +9,15 @@ Getting started
 
 Install the requirements:
 
+::
+
     pip install -r requirements.txt
 
 Load the fixtures:
 
+::
+
+    python manage.py syncdb --migrate  # don't generate an admin user
     python manage.py loaddata fixtures/example_initial_data.json
     python manage.py loaddata fixtures/auth_and_guardian_data.json
 
@@ -21,7 +26,7 @@ The initial data comes with two users::
     admin/admin
     example-user/test
 
-Login with as example-user. You'll now have limtited right to edit/move/delete pages and content items.
+Login as example-user. You'll now have limited rights to edit / move / delete pages and content items.
 
 
 Assigning permissions

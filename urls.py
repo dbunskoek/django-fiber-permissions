@@ -21,4 +21,3 @@ if settings.DEBUG:
 urlpatterns += patterns('',
     (r'', 'fiber.views.page'),
 )
-
