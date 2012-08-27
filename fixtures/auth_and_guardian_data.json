@@ -405,24 +405,6 @@
         }
     },
     {
-        "pk": 1,
-        "model": "auth.user",
-        "fields": {
-            "username": "admin",
-            "first_name": "",
-            "last_name": "",
-            "is_active": true,
-            "is_superuser": true,
-            "is_staff": true,
-            "last_login": "2012-08-21T15:10:45Z",
-            "groups": [],
-            "user_permissions": [],
-            "password": "pbkdf2_sha256$10000$oAo7URCrCAIT$s7FQB0al3nSlVKizlzGQ/FFYs/tL4tyPBtn2O4gq4LI=",
-            "email": "admin@lkl.nl",
-            "date_joined": "2012-08-21T15:09:36Z"
-        }
-    },
-    {
         "pk": -1,
         "model": "auth.user",
         "fields": {
@@ -441,6 +423,24 @@
         }
     },
     {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2012-08-27T09:15:02Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$oAo7URCrCAIT$s7FQB0al3nSlVKizlzGQ/FFYs/tL4tyPBtn2O4gq4LI=",
+            "email": "admin@lkl.nl",
+            "date_joined": "2012-08-21T15:09:36Z"
+        }
+    },
+    {
         "pk": 2,
         "model": "auth.user",
         "fields": {
@@ -450,7 +450,7 @@
             "is_active": true,
             "is_superuser": false,
             "is_staff": true,
-            "last_login": "2012-08-21T15:15:31Z",
+            "last_login": "2012-08-27T09:15:24Z",
             "groups": [],
             "user_permissions": [
                 31,
@@ -485,10 +485,10 @@
         }
     },
     {
-        "pk": 2,
+        "pk": 14,
         "model": "guardian.userobjectpermission",
         "fields": {
-            "object_pk": "23",
+            "object_pk": "31",
             "user": 2,
             "content_type": 12,
             "permission": 35
@@ -550,6 +550,86 @@
         "fields": {
             "object_pk": "4",
             "user": 2,
+            "content_type": 13,
+            "permission": 38
+        }
+    },
+    {
+        "pk": 9,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "26",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 10,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "27",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 11,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "28",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 12,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "29",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 13,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "30",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 15,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "32",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 16,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "20",
+            "user": 2,
+            "content_type": 12,
+            "permission": 35
+        }
+    },
+    {
+        "pk": 19,
+        "model": "guardian.userobjectpermission",
+        "fields": {
+            "object_pk": "4",
+            "user": 1,
             "content_type": 13,
             "permission": 38
         }
